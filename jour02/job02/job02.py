@@ -3,17 +3,17 @@ class Livre:
         self.__auteur = auteur
         self.__titre = titre
         self.__nbrPages = nbrPages
-    def get__Auteur(self):
+    def __get__Auteur__(self):
         return self.__auteur
-    def get__Titre(self):
+    def __get__Titre__(self):
         return self.__titre
-    def get__NbrPages(self):
+    def __get__NbrPages__(self):
         return self.__nbrPages
-    def set__Auteur(self, auteur):
+    def __set__Auteur__(self, auteur):
         self.__auteur = auteur
-    def set__Titre(self, titre):
+    def __set__Titre__(self, titre):
         self.__titre = titre
-    def set__NbrPages(self, nbrPages):
+    def __set__NbrPages__(self, nbrPages):
         if nbrPages > 0 and nbrPages==int(nbrPages):
             self.__nbrPages = nbrPages
         else:
@@ -24,12 +24,12 @@ class Livre:
 
 
 livre = Livre("Victor Hugo", "Les Misérables", 1225)
-print(livre.get__Auteur())
-print(livre.get__Titre())
-print(livre.get__NbrPages())
-livre.set__Auteur("guy de maupassant")
-livre.set__Titre("bel ami")
-livre.set__NbrPages(70.5)
-print(livre.get__Auteur())
-print(livre.get__Titre())
-print(livre.get__NbrPages())
+print(livre.__get__Auteur__())
+print(livre.__get__Titre__())
+print(livre.__get__NbrPages__())
+livre.__set__Auteur__("guy de maupassant")
+livre.__set__Titre__("bel ami")
+livre.__set__NbrPages__(70.5)
+print(livre.__get__Auteur__())
+print(livre.__get__Titre__())
+print(livre.__get__NbrPages__())

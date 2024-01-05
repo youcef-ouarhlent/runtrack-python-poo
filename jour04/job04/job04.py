@@ -25,7 +25,7 @@ class Rectangle(Forme):
         self.__hauteur = hauteur
 
 # Création d'un objet Rectangle
-rectangle = Rectangle(5, 10)
+rectangle = Rectangle(5, 9)
 
 # Appel de la méthode aire de la classe Rectangle
 print("L'aire du rectangle est :", rectangle.aire())
